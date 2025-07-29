@@ -1,8 +1,8 @@
 [phases.setup]
-nixPkgs = ['nodejs-18_x']
+nixPkgs = ['nodejs-18_x', 'yarn']
 
 [phases.install]
-cmds = ['npm install --omit=dev']
+cmds = ['yarn install --frozen-lockfile --production']
 
 [phases.build]
 cmds = ['echo "Build complete"']
